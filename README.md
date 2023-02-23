@@ -3,8 +3,9 @@
 ## Lista de funcionalidades
 
 ### Básico
-- [ ] Ter uma lista de produtos com um identificador para cada item
+- [X] Ter uma lista de produtos com um identificador para cada item
 - [ ] Criar interface para a lista de produtos
+- [ ] Conectar lista de produtos com um banco de dados
 - [ ] Poder adicionar um item na lista de produtos
 - [ ] Criar interface para poder adicionar um item na lista de produtos
 - [ ] Poder remover um item da lista de produtos

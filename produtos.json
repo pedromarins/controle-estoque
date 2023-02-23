@@ -1,0 +1,47 @@
+[
+    {
+        "id": "0001",
+        "nome": "Teclado Gamer",
+        "marca": "Genérico"
+    },
+    {
+        "id": "0002",
+        "nome": "Mouse Gamer",
+        "marca": "Genérico"
+    },
+    {
+        "id": "0003",
+        "nome": "Monitor 4k",
+        "marca": "LG"
+    },
+    {
+        "id": "0004",
+        "nome": "Tablet",
+        "marca": "Samsung"
+    },
+    { 
+        "id": "0005",
+        "nome":"Notebook",
+        "marca": "Genérico"
+    },
+    {
+        "id": "0006",
+        "nome":"Impressora",
+        "marca": "Genérico"
+    },
+    {
+        "id": "0007",
+        "nome":"Roteador",
+        "marca": "Genérico"
+    },
+    {
+        "id": "0008",
+        "nome":"Pen Drive",
+        "marca": "Genérico"
+    },
+    {
+        "id": "0009",
+        "nome":"Caixas de som",
+        "marca": "Genérico"
+    }
+]
