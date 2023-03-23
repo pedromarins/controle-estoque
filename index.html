@@ -5,15 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle de estoque</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Controle de estoque</h1>
-        <button>+</button>
-        <input type="search">
+    <header class="controle">
+        <h1 class="titulo">Controle de estoque</h1>
+        <button class="adicionar">+</button>
+        <input class="busca" type="search">
     </header>
-    <table>
-        <thead>
+    <table class="conteudo">
+        <thead class="topico">
             <tr>
                 <th>Id</th>
                 <th>Nome</th>
@@ -22,6 +24,16 @@
                 <th>Opções</th>
             </tr>
         </thead>
+        <tr>
+            <td>0001</td>
+            <td>Teclado Gamer</td>
+            <td>Genérico</td>
+            <td>002</td>
+            <td>
+                <button>editar</button>
+                <button>remover</button>
+            </td>
+        </tr>
         <tr>
             <td>0001</td>
             <td>Teclado Gamer</td>
