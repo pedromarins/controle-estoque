@@ -5,7 +5,7 @@ async function GetTodosProdutos() {
     let response;
 
     try {
-        response = await (await fetch(baseURL, { method: 'GET' }));
+        response = await fetch(baseURL, { method: 'GET' });
     } catch (e) {
         console.log("Aqui está o erro", e);
     };
