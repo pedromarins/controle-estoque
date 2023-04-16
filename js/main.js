@@ -1,19 +1,12 @@
-const baseURL = "../produtos.json"
-const conteudo_tabela = document.querySelector('.conteudo tbody')
+import { GetTodosProdutos } from "../services/api/index.mjs";
+const conteudo_tabela = document.querySelector('.conteudo tbody');
 
-async function request() {
-    try{
-      const response = await fetch(baseURL);
-      return response.json();
-    }catch(e) {
-      console.error(e);
-    };
-};
-
-request().then(function(response) {
+GetTodosProdutos().then(function (response) {
+  if (response instanceof Error) alert(response);
+  else {
     response.forEach(produto => {
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
           <td>${produto.id}</td>
           <td>${produto.nome}</td>
           <td>${produto.marca}</td>
@@ -23,6 +16,7 @@ request().then(function(response) {
             <button>remover</button>
           </td>
         `;
-        conteudo_tabela.appendChild(tr);
-      });
+      conteudo_tabela.appendChild(tr);
+    });
+  };
 })
