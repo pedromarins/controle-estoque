@@ -1,12 +1,16 @@
 # Controle de estoque de uma loja de periféricos de TI 
 
+## Dependências
+
+Para o front-end deste projeto rodar ele precisa de uma API de dados de produtos. Para gerar uma API local experimental use o projeto que está no repositório https://github.com/FaSn0w/controle-estoque-api criado por @FaSn0w.
+
 ## Lista de funcionalidades
 
 ### Básico
 - [X] Ter uma lista de produtos com um identificador para cada item
 - [X] Criar interface para a lista de produtos
 - [X] Ler o arquivo da lista de produtos
-- [ ] Conectar lista de produtos com uma API
+- [X] Conectar lista de produtos com uma API local
 - [ ] Poder adicionar um item na lista de produtos
 - [ ] Criar interface para poder adicionar um item na lista de produtos
 - [ ] Poder remover um item da lista de produtos
