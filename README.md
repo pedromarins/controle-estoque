@@ -13,8 +13,8 @@ Para o front-end deste projeto rodar ele precisa de uma API de dados de produtos
 - [X] Conectar lista de produtos com uma API local
 - [X] Poder adicionar um item na lista de produtos
 - [X] Criar interface para poder adicionar um item na lista de produtos
-- [ ] Poder remover um item da lista de produtos
-- [ ] Criar interface para poder remover um item na lista de produtos
+- [X] Poder remover um item da lista de produtos
+- [X] Criar interface para poder remover um item na lista de produtos
 - [ ] Adicionar quantidade de itens na lista de produtos
 - [ ] Criar interface para poder adicionar a quantidade de itens na lista de produtos
 - [ ] Poder alterar a quantidade de itens de um produto específico
