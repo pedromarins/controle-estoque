@@ -4,11 +4,15 @@
 
 body {
     margin: 0;
+    padding: 10vh 0 0;
+}
+
+main, .controle {
+    width: 80vw;
+    margin: 0 auto;
 }
 
 .controle {
-    width: 80vw;
-    margin: 10vh auto 0;
     background: #ccc;
     border: 2px solid #333;
     padding: 1em;
@@ -29,15 +33,13 @@ body {
     
 }
 
-
 .conteudo {
-    width: 80vw;
-    margin: 0 auto 10vh;
     background: #eee;
     border: 2px solid #333;
     border-top: none;
     border-radius: 0 0 15px 15px;
     border-collapse: collapse;
+    width: 100%;
 }
 
 .conteudo th, .conteudo td {
@@ -59,4 +61,16 @@ body {
   
 .conteudo tr:nth-child(even) {
     background-color: #ccc;
+}
+
+/* form de cadastro */
+
+.cadastro {
+    padding: 5px;
+    border: 2px solid #000;
+    display: none;
+}
+
+.cadastro-ativo {
+    display: block;
 }

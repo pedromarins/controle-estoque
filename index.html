@@ -11,23 +11,30 @@
 <body>
     <header class="controle">
         <h1 class="titulo">Controle de estoque</h1>
-        <button class="adicionar">+</button>
+        <button class="adicionar" id="adicionar-produto">+</button>
         <input class="busca" type="search">
     </header>
-    <table class="conteudo">
-        <thead class="topico">
-            <tr>
-                <th>Id</th>
-                <th>Nome</th>
-                <th>Marca</th>
-                <th>Qtd</th>
-                <th>Opções</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
-
+    <main>
+        <form class="cadastro" id="cadastro">
+            <input type="text" class="cadastro-campo" name="nome" placeholder="Nome do produto">
+            <input type="text" class="cadastro-campo" name="marca" placeholder="Marca">
+            <input type="number" class="cadastro-campo" name="qtd" placeholder="Quantidade">
+            <input type="submit" class="cadastro-envio" id="submit" value="Cadastrar">
+        </form>
+        <table class="conteudo">
+            <thead class="topico">
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Marca</th>
+                    <th>Qtd</th>
+                    <th>Opções</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </main>
     <script src="js/main.js"></script>
 </body>
 </html>
