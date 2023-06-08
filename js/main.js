@@ -27,8 +27,6 @@ cadastro.addEventListener('submit', (e) => {
       criaItens(response)
     });
   })
-
-  
 })
 
 conteudo.addEventListener("click", (e) => {
@@ -42,10 +40,33 @@ conteudo.addEventListener("click", (e) => {
         console.log('atualizando')
         criaItens(response)
       });
-    })
-
-    
+    })  
   }
+
+  // Falta documentação de endpoint para atualizar quantidade
+  // if(e.target.className=='editar-item') {
+  //   const id = e.target.parentNode.parentNode.querySelector('.produto-id').textContent
+  //   const ItemEditado = e.target.parentNode.parentNode.querySelector('.produto-qtd')
+  //   const qtdItemEditado = ItemEditado.textContent
+  //   if(e.target.textContent == "Editar") {
+  //     ItemEditado.innerHTML = `<input type="number" value=${qtdItemEditado}>`
+  //     ItemEditado.querySelector('input').focus()
+  //     e.target.textContent = "Salvar"
+  //   } else {
+  //     const novoValorItemEditado = ItemEditado.querySelector('input').value
+  //     ItemEditado.innerHTML = novoValorItemEditado
+  //     e.target.textContent = "Editar"    
+
+  //     item.nome = e.target.parentNode.parentNode.querySelector('.produto-nome').textContent
+  //     item.marca = e.target.parentNode.parentNode.querySelector('.produto-marca').textContent
+  //     item.qtd = qtdItemEditado
+
+  //     // Atualizar com função para edição
+  //     // updateItem(id, item).then(function(response) {
+  //     //   console.log(response)
+  //     // });
+  // }
+  // }
 })
 
 
@@ -63,6 +84,26 @@ async function createItem(item) {
     console.error(error);
     throw error;
   }
+}
+
+function criaItens(dados) {
+  console.log('chegou na criaItens')
+  conteudo_tabela.innerHTML = ''
+  console.log(conteudo_tabela)
+    dados.forEach(produto => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td class="produto-id">${produto.id}</td>
+          <td class="produto-nome">${produto.nome}</td>
+          <td class="produto-marca">${produto.marca}</td>
+          <td class="produto-qtd">${produto.qtd}</td>
+          <td>
+            <button class="editar-item">Editar</button>
+            <button class="remover-item">Remover item</button>
+          </td>
+        `;
+        conteudo_tabela.appendChild(tr);
+      });
 }
 
 async function deleteItem(id) {
@@ -89,24 +130,3 @@ async function getProdutos() {
 getProdutos().then(function(response) {
     criaItens(response)
 });
-
-function criaItens(dados) {
-  console.log('chegou na criaItens')
-  conteudo_tabela.innerHTML = ''
-  console.log(conteudo_tabela)
-    dados.forEach(produto => {
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
-          <td class="produto-id">${produto.id}</td>
-          <td class="produto-nome">${produto.nome}</td>
-          <td class="produto-marca">${produto.marca}</td>
-          <td class="produto-qtd">${produto.qtd}</td>
-          <td>
-            <button>editar</button>
-            <button class="remover-item">Remover item</button>
-          </td>
-        `;
-        conteudo_tabela.appendChild(tr);
-      });
-}
-
