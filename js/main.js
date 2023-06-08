@@ -3,11 +3,27 @@ const conteudo_tabela = document.querySelector('.conteudo tbody')
 const adicionar = document.querySelector('#adicionar-produto')
 const cadastro = document.querySelector('#cadastro')
 const conteudo = document.querySelector('#conteudo')
+const busca = document.querySelector('#busca')
 let item = {
   nome: "",
   marca: "",  
   qtd: 0
 }
+
+busca.addEventListener('input', () => { 
+  console.log(busca.value)
+
+  document.querySelectorAll("tr").forEach( (e) => { e.hidden=true})
+  const nomes = document.querySelectorAll(".produto-nome")
+  const marcas = document.querySelectorAll(".produto-marca")
+  const valores = [...nomes, ...marcas]
+  
+  valores.forEach( (e) => {
+    if(e.textContent.toLowerCase().includes(busca.value.toLowerCase())) {
+      e.parentNode.hidden=false
+    }
+  })
+})
 
 adicionar.addEventListener('click', () => {
   cadastro.classList.toggle('cadastro-ativo')
